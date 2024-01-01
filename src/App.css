@@ -1,0 +1,658 @@
+*, *:before, *:after {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 'Martel', Georgia, Times, 'Times New Roman', serif;
+  font-size: 16px;
+  color: rgb(10, 44, 65);
+}
+
+:root {
+  --primary-color: rgb(10, 44, 65);
+  --secondary-color: rgb(232, 85, 38);
+  --white-color: rgb(245, 245, 245);
+  --background-color: rgb(241, 235, 222);
+}
+
+@font-face {
+  font-family: 'Martel';
+  src: url('./fonts/Martel/Martel-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Martel';
+  src: url('./fonts/Martel/Martel-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Martel';
+  src: url('./fonts/Martel/Martel-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Martel';
+  src: url('./fonts/Martel/Martel-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Martel';
+  src: url('./fonts/Martel/Martel-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Martel';
+  src: url('./fonts/Martel/Martel-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Martel';
+  src: url('./fonts/Martel/Martel-Black.ttf') format('truetype');
+  font-weight: 900;
+}
+
+html, body {
+  background-color: var(--primary-color);
+}
+
+/*----------------------------------------------*/
+
+header {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  justify-content: space-between;
+  height: 110px;
+  align-items: center;
+  padding: 4%;
+  z-index: 1;
+  top: 0;
+}
+
+header a {
+  display: flex;
+}
+
+
+#logo {
+  width: 20vh;
+  padding: 2%;
+}
+
+header button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menuIcon {
+  width: 32px;
+}
+
+/*----------------------------------------------*/
+
+main {
+  background-color: var(--background-color);
+}
+
+main hr {
+  margin: 15% 3% 15% 3%;
+  opacity: 10%;
+}
+
+/*----------------------------------------------*/
+
+footer {
+  text-align: center;
+  background-color: var(--white-color);
+  padding: 2% 0 2% 0;
+  position: absolute;
+  top: 100;
+  width: 100%;
+}
+
+footer p {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/*----------------------------------------------*/
+
+.hpContainer, .aboutHpContainer {
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.headPhoto {
+  object-fit: cover;
+  z-index: 0;
+  width: 100%;
+  min-height: 85vh;
+  height: 50%;
+}
+
+.headPhotoAbout {
+  object-fit: cover;
+  z-index: 0;
+  width: 100%;
+  min-height: 55vh;
+  height: 50%;
+}
+
+
+.hpCaption {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+}
+
+.hpCaption img {
+  width: 280px
+}
+
+.aboutTagContainer h1 {
+  font-size: 2rem;
+  margin: 10% 10% 4% 10%;
+}
+
+.aboutTagContainer h3 {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  padding: 4%;
+  margin: 5% 10% 5% 10%;
+  border-left: 2px solid var(--primary-color);
+}
+
+.aboutTagContainer span {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+
+
+/*----------------------------------------------*/
+
+.why {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+}
+
+#whyUsHeader {
+  width: 250px;
+  margin-bottom: 3%;
+}
+
+.scrollContainer {
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  padding: 4% 4% 2% 4%;
+  margin-bottom: 4%;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.scrollContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.whyButton {
+  cursor: pointer;
+  margin-right: 5%;
+  padding: 2% 3% 2% 3%;
+  background: none;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  box-shadow: 2px 2px 3px 2px rgb(0, 0, 0, 0.2);
+  background-color: var(--white-color);
+}
+
+.whyButton.selected {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.whyButton:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.answerContainer {
+  padding: 0 4% 0 4%;
+  border-left: 2px solid var(--primary-color);
+  margin-left: 6%;
+  margin-bottom: 15%;
+}
+
+/*----------------------------------------------*/
+
+.landingTagContainer {
+  background-color: var(--primary-color);
+  box-shadow: inset 0px 5px 5px -5px rgb(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  margin-top: 15%;
+  padding: 5% 0 5% 0;
+  height: 100%;
+}
+
+.landingTagContainer h1 {
+  font-size: 2rem;
+  padding: 5% 15% 2% 15%;
+  color: var(--white-color);
+}
+
+.landingTagContainer h3 {
+  font-size: 1rem;
+  padding: 0 15% 5% 15%;
+  color: var(--secondary-color);
+}
+
+/*----------------------------------------------*/
+
+.caption {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -65%);
+  text-align: center;
+}
+
+.caption h1 {
+  font-size: 3.5rem;
+  line-height: 1.25;
+  color: var(--primary-color);
+}
+
+/*----------------------------------------------*/
+
+.ourServicesArticle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-color);
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#ourServicesHeader {
+  width: 280px;
+  margin-top: 5%;
+  margin-bottom: 3%;
+}
+
+.ourServicesContainer {
+  margin: 5% 5% 5% 5%;
+}
+
+
+.ourServicesContainer li {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 15%;
+}
+
+.ourServicesContainer li img {
+  width: 50px;
+  margin-right: 5%;
+  fill: var(--secondary-color);
+}
+
+.ourServicesContainer h3 {
+  line-height: 1.25;
+  color: var(--primary-color);
+}
+
+/*----------------------------------------------*/
+
+.teamContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#teamHeader {
+  width: 200px;
+}
+
+
+.teamContainer h1 {
+  font-size: 2.5rem;
+  border-bottom: 2px solid var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.teamContainer h2 {
+  font-size: 1.5rem;
+  margin: 10% 0 2% 0;
+}
+
+/*--------------*/
+
+.partners {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.partnerContainer {
+  line-height: 1.25;
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.partnerContainer img {
+  height: 150px;
+}
+
+.partnerContainer h2 {
+  font-size: 2rem;
+}
+
+.partnerContainer h3 {
+  font-size: 1rem;
+  color: var(--secondary-color);
+}
+
+/*--------------*/
+
+.counselors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 2% 4% 2% 4%;
+}
+
+.employeeContainer {
+  line-height: 1.25;
+  text-align: center;
+  padding: 2% 0 2% 0;
+  margin: 0 2% 0 2%;
+}
+
+.employeeContainer img {
+  height: 100px;
+}
+
+.employeeContainer h2 {
+  font-size: 1.25rem;
+}
+
+.employeeContainer h3 {
+  font-size: .75rem;
+  color: var(--secondary-color);
+}
+
+/*--------------*/
+
+.interns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 2% 4% 2% 4%;
+}
+
+/*--------------*/
+
+.officeStaff {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 2% 4% 2% 4%;
+}
+
+/*----------------------------------------------*/
+
+.contactContainer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.locations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 2%;
+}
+
+.locationContainer {
+  text-align: left;
+  margin: 5%;
+  white-space: nowrap;
+}
+
+.locationContainer h2 {
+  font-size: 1.5rem;
+}
+
+.locationContainer li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.locationIcon {
+  width: 25px;
+  margin-right: 10%;
+}
+
+/*----------------------------------------------*/
+
+.mobileMenuOff {
+  height: 0;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  transition: height .3s ease;
+  background-color: var(--primary-color);
+}
+
+.mobileMenuOn {
+  display: block;
+  position: relative;
+  text-align: center;
+  border-bottom: 3px solid var(--primary-color);
+  height: 100vh;
+  transition: height .5s ease;
+  background-color: var(--primary-color);
+}
+
+.mobileMenuOn ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style-type: none;
+}
+
+.mmLink {
+  margin-bottom: 10%;
+}
+
+.mmLink a {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--white-color);
+}
+
+/*----------------------////------------------------*/
+
+@media screen and (max-height: 325px) {
+  .mobileMenuOn {
+    height: 140vh;
+  }
+}
+
+/*----------------------////------------------------*/
+
+@media screen and (min-width: 1200px) {
+
+  .headPhotoAbout {
+    max-height: 60vh;
+  }
+
+  .headPhoto {
+    min-height: 40vh;
+    max-height: 80vh;
+  }
+
+  /*---------*/
+
+
+  .aboutTagContainer span {
+    font-size: 3.5rem;
+  }
+
+  .aboutTagContainer h1 {
+    margin-top: 4%;
+    font-size: 2.5rem;
+  }
+
+  .aboutTagContainer h3 {
+    font-size: 2rem;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 2%;
+  }
+
+  .landingTagContainer {
+    margin-top: 0;
+  }
+
+  .landingTagContainer h1 {
+    font-size: 3rem;
+    padding-left: 10%;
+  }
+
+  .landingTagContainer h3 {
+    font-size: 2rem;
+    padding-left: 10%;
+  }
+
+  /*---------*/
+
+  .why {
+    margin-top: 5%;
+  }
+
+  .whyButton {
+    margin-right: 3%;
+    margin-left: 3%;
+  }
+
+  #whyUsHeader {
+    margin-bottom: 0%;
+  }
+
+  .scrollContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+  }
+
+  .answerContainer {
+    padding: 0 7% 0 3%;
+    margin-left: 11%;
+    margin-bottom: 6%;
+  }
+
+  .answerDisplayText {
+    font-size: 1.5rem;
+  }
+
+  .whyButton {
+    margin-right: 0;
+    font-size: 1.5rem;
+    padding: 1% 2% 1% 2%;
+  }
+
+  .ourServicesArticle {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  #ourServicesHeader {
+    margin-top: 0%;
+    margin-bottom: 0;
+  }
+
+
+  .ourServicesContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ourServicesContainer li {
+    padding: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .ourServicesContainer li h3 {
+    font-size: 2rem;
+  }
+
+  .ourServicesContainer li img {
+    width: 75px;
+  }
+
+  /*---------*/
+
+  .teamContainer h2 {
+    margin-top: 3%;
+    margin-bottom: 2%;
+    font-size: 2.5rem;
+  }
+
+  .partners {
+    width: 25vw;
+    margin-bottom: 5%;
+  }
+
+  .counselors {
+    padding-top: 0;
+  }
+
+  .interns {
+    padding-top: 0;
+  }
+
+  .officeStaff {
+    padding-top: 0;
+  }
+
+  .employeeContainer {
+    padding-top: 0;
+    padding-bottom: 5%;
+  }
+
+  .employeeContainer img {
+    height: 150px;
+  }
+
+}
+
+/*----------------------////------------------------*/
+

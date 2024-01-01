@@ -1,0 +1,35 @@
+import React from 'react';
+import mod from '../../assets/icons/mod.png'
+import analysis from '../../assets/icons/analysis.png'
+import evaluations from '../../assets/icons/evaluations.png'
+import seeking from '../../assets/icons/seeking.png'
+import resolution from '../../assets/icons/resolution.png'
+
+export default function OurServices() {
+  return (
+    <ul className='ourServicesContainer'>
+      <h1>Our Services</h1>
+      <li>
+        <img src={mod} alt='gear and hard hat' />
+        <h3>Workplace modifications</h3>
+      </li>
+      <li>
+        <img src={analysis} alt='clipboard which checkmarks' />
+        <h3>Job analysis</h3>
+      </li>
+      <li>
+        <img src={evaluations} alt='stack of papers with magnifying glass' />
+        <h3>Vocational evaluations for alternative work options</h3>
+      </li>
+      <li>
+        <img src={seeking} alt='briefcase with checkmark' />
+        <h3>Job Seeking Assistance</h3>
+      </li>
+      <h1>The End Goal?</h1>
+      <li>
+        <img src={resolution} alt='handshake' />
+        <h3>Case resolution</h3>
+      </li>
+    </ul>
+  )
+}
